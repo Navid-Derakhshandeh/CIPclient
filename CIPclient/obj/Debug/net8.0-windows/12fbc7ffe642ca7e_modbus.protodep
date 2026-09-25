@@ -1,0 +1,2 @@
+obj\Debug\net8.0-windows\Protos/Modbus.cs \
+obj\Debug\net8.0-windows\Protos/ModbusGrpc.cs: Protos/modbus.proto

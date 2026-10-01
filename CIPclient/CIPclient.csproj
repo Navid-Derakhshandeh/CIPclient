@@ -15,6 +15,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="NetMQ" Version="4.0.4.3" />
   </ItemGroup>
 	<ItemGroup>
 		<Protobuf Include="Protos/auth.proto" GrpcServices="Client" />

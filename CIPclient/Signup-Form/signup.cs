@@ -8,11 +8,9 @@ namespace CIPclient
     public partial class signup : Form
     {
         private readonly AuthServiceClient auth;
-
         public signup()
         {
             InitializeComponent();
-
             var channel = GrpcChannel.ForAddress("http://localhost:5000",
             new GrpcChannelOptions
             {
@@ -22,21 +20,15 @@ namespace CIPclient
                         EnableMultipleHttp2Connections = true
                     }
             });
-
             auth =
                 new AuthServiceClient(channel);
         }
-
-
         private async void btnregister_Click(object sender, EventArgs e)
         {
             string username =
                 txtuser.Text ?? "";
-
             string password =
                 txtpass.Text ?? "";
-
-
             try
             {
                 var response =
@@ -46,16 +38,12 @@ namespace CIPclient
                             Username = username,
                             Password = password
                         });
-
-
                 if (response.Success)
                 {
                     MessageBox.Show(
                         response.Message);
-
-                    Modbus frm = new Modbus();
+                    Main frm = new Main();
                     frm.Show();
-
                     this.Hide();
                 }
                 else

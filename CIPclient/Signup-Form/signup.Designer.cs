@@ -58,6 +58,7 @@
             txtpass.Name = "txtpass";
             txtpass.Size = new Size(146, 23);
             txtpass.TabIndex = 2;
+            txtpass.UseSystemPasswordChar = true;
             // 
             // label1
             // 
